@@ -6,7 +6,7 @@
 
 Please look into the folder CallTraces.
 
-##Reproduce -Type-1
+##Reproduce --Type 1--
 For dsn 16, check README_ATTACK and discussions (***very important!***)
 
 Bckground: Metaexploit, GDB
