@@ -72,7 +72,7 @@ OBJA =
 
 SEDCMD = 
 
-CFLAGS = -O
+CFLAGS = -D_FORTIFY_SOURCE=0 -static -m32 -fno-stack-protector -g 
 # If you want debug on by default, use: CFLAGS="-g" ./configure
 LDFLAGS = $(CFLAGS)
 
