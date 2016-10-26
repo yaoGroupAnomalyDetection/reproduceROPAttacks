@@ -607,11 +607,11 @@ int main (argc, argv)
 	do_list(-1, -1); /* print totals */
     }
 
-    printf("F**K line 611  a line before do_exit()\n");
-    printf("print exit_code\n");
+    //printf("F**K line 611  a line before do_exit()\n");
+    //printf("print exit_code\n");
     printf("%d\n", exit_code);
     do_exit(exit_code);  // segmentation fault here
-    printf("F**K line 613  a line after do_exit()\n");
+    //printf("F**K line 613  a line after do_exit()\n");
     return exit_code; /* just to avoid lint warning */
 }
 
