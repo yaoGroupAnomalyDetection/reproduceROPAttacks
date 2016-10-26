@@ -1,6 +1,6 @@
 # Attacks and Call Traces
 
-***This is a public domain, only for reproducing attacks and trace tool guided. Anyone is interesting in program anomaly detection is welcome to make contributions***
+***This is a public domain, only for reproducing attacks and trace tool guided. Anyone who is interesting in program anomaly detection is welcome to make contributions***
 
 ##Call Trace Colection
 
