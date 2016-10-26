@@ -25,12 +25,17 @@ The scressnhot for metasploit to get a shell!
 
 The screenshot for gzip ROP to get a shell!
 
+
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/ropShell.png "Get the Shell from metasploit")
 
 
 return2Libc to get a shell!
 
+use gdb to find adresses:
+
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/LibCgetAshell.png "Return toLibc how to find addresses")
+
+feed these addresse into exploit script
 
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/returnToLibcCode.png "Map address to code")
 
