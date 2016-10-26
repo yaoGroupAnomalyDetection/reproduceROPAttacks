@@ -1,0 +1,54 @@
+backdoor-attack-context-strace/1.trace
+found count: 461
+not found count: 3810
+not found percent: 0.892062748771
+
+backdoor-attack-context-strace/2.trace
+found count: 441
+not found count: 3789
+not found percent: 0.895744680851
+
+backdoor-attack-context-strace/3.trace
+found count: 501
+not found count: 452
+not found percent: 0.474291710388
+
+backdoor-attack-context-strace/4.trace
+found count: 628
+not found count: 853
+not found percent: 0.575962187711
+
+backdoor-attack-context-strace/5.trace
+found count: 1397
+not found count: 1590
+not found percent: 0.532306662203
+
+backdoor-attack-context-strace/6.trace
+found count: 460
+not found count: 3764
+not found percent: 0.891098484848
+
+backdoor-attack-context-strace/7.trace
+found count: 423
+not found count: 1037
+not found percent: 0.710273972603
+
+Telnet-IAC-Buffer-Overflow-context/0.trace
+found count: 824734
+not found count: 58181
+not found percent: 0.0658964906022
+
+
+gzip_v5_rop_context/context-sens.trace
+found count: 32
+not found count: 1272
+not found percent: 0.975460122699
+
+
+
+gzip_v5_rop_chain_context/context-sens.trace
+found count: 47
+not found count: 1
+not found percent: 0.0208333333333
+
+last 15 out of 48 are wrong context. so percentage is 16/48 = 33%

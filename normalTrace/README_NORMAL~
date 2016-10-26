@@ -1,0 +1,19 @@
+== Read me file normal trace===
+== Ke Tian @ 2016 ==
+
+bash:
+runall -> just add "strace' before calling the command. 
+
+
+vim:
+Check the runall in scripts: 
+`$IN_DIR/$SCRIPT_FILE`;
+Need to add the strace here
+
+
+Others:
+directly run the scripts from Kui's directory. "RunALL"
+
+
+
+

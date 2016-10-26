@@ -1,0 +1,41 @@
+12937 [00007fbd07820c33] select(1, [0], NULL, NULL, {4, 259163}) = ? ERESTARTNOHAND (To be restarted if no handler)
+12937 [00007fbd07820c33] --- SIGALRM {si_signo=SIGALRM, si_code=SI_KERNEL} ---
+12937 [00007fbd07765dbd] rt_sigaction(SIGALRM, {0x408790, [], SA_RESTORER|SA_INTERRUPT, 0x7fbd07765cb0}, NULL, 8) = 0
+12937 [00007fbd07765dbd] rt_sigaction(SIGALRM, NULL, {0x408790, [], SA_RESTORER|SA_INTERRUPT, 0x7fbd07765cb0}, 8) = 0
+12937 [00007fbd07765dbd] rt_sigaction(SIGALRM, {0x408790, [], SA_RESTORER|SA_INTERRUPT, 0x7fbd07765cb0}, NULL, 8) = 0
+12937 [00007fbd077efb97] alarm(30)      = 0
+12937 [00007fbd07765cb9] rt_sigreturn() = -1 EINTR (Interrupted system call)
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd07820c33] select(0, NULL, NULL, NULL, {0, 200000}) = 0 (Timeout)
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_UNBLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd077efb97] alarm(0)       = 30
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd07820932] setresuid(-1, 0, -1) = 0
+12937 [00007fbd078209d2] setresgid(-1, 0, -1) = 0
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_UNBLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd0781a4c0] open("/usr/local/var/proftpd.scoreboard", O_RDWR) = 2
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd077f0d27] geteuid()      = 0
+12937 [00007fbd078209d2] setresgid(-1, 65534, -1) = 0
+12937 [00007fbd07820932] setresuid(-1, 65534, -1) = 0
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_UNBLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd0781ab8f] fcntl(2, F_SETLKW, {type=F_WRLCK, whence=SEEK_SET, start=0, len=0}) = 0
+12937 [00007fbd078293b0] lseek(2, 32, SEEK_SET) = 32
+12937 [00007fbd077f0f47] getpgrp()      = 12937
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd07820932] setresuid(-1, 0, -1) = 0
+12937 [00007fbd078209d2] setresgid(-1, 0, -1) = 0
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_UNBLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd0781a6b0] read(2, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 624) = 624
+12937 [00007fbd078293b0] lseek(2, 0, SEEK_CUR) = 656
+12937 [00007fbd0781a6b0] read(2, "", 624) = 0
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd077f0d27] geteuid()      = 0
+12937 [00007fbd078209d2] setresgid(-1, 65534, -1) = 0
+12937 [00007fbd07820932] setresuid(-1, 65534, -1) = 0
+12937 [00007fbd07765ee0] rt_sigprocmask(SIG_UNBLOCK, [HUP INT QUIT BUS USR1 ALRM TERM CHLD IO], NULL, 8) = 0
+12937 [00007fbd0781ab8f] fcntl(2, F_SETLK, {type=F_UNLCK, whence=SEEK_SET, start=0, len=0}) = 0
+12937 [00007fbd0781ae10] close(2)       = 0
+12937 [00007fbd077efb97] alarm(30)      = 0
+12937 [00007fbd0781a0e5] lstat("/etc/shutmsg", 0x7ffcabea1f10) = -1 ENOENT (No such file or directory)
+12937 [00007fbd07820c33] select(1, [0], NULL, NULL, {30, 0} <detached ...>

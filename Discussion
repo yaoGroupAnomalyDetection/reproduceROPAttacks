@@ -1,0 +1,81 @@
+=============  Response 2==============
+Good to hear you are making progress. For the gzip case, I added a few lines of code with vulnerability(buffer overflow) to the source file and then build the binary. Basically, I manually injected a vulnerability in it, which originally did not exist.
+
+The CVE you found is probably a better option to reproduce, because then you can cite the CVE in your paper, which is much nicer than what i did. If you decide to go this route, make sure you pick the right version of vulnerable gzip. 
+
+You probably also need to turn off ASLR in OS to have more predictable addresses.
+
+=============  SEND 2 =================
+Thanks for your help, I have achieved the  metasploit  exploit part.
+
+But for your gzip ROP:
+
+I can use ROP to generate the gadgets but cannot run the program
+
+I test the folder under your gzip_v5_rop_chain_context:
+
++++++++++++++++
+ketian@ketian:~/Desktop/gzip_v5_rop_chain_context$ ./allfile -V
+allfile 1.3
+(1999-12-21)
+Copyright 1999 Free Software Foundation
+Copyright 1992-1993 Jean-loup Gailly
+This program comes with ABSOLUTELY NO WARRANTY.
+You may redistribute copies of this program
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING.
+Compilation options:
+DIRENT UTIME STDC_HEADERS HAVE_UNISTD_H HAVE_MEMORY_H HAVE_STRING_H 
+Written by Jean-loup Gailly.
++++++++++++++++++++
+
+It keeps give me segmentation fault even though I just run a very small txt file 
+++++++++++++++++++
+ketian@ketian:~/Desktop/gzip_v5_rop_chain_context$ ./allfile aaa
+Segmentation fault (core dumped)
+++++++++++++++++++
+
+And it can detects the long file name:
+++++++++++++++++++++
+ketian@ketian:~/Desktop/gzip_v5_rop_chain_context$ ./allfile  `python -c "print 'A'*1024"`
+allfile: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: file name too long
+++++++++++++++++++++
+
+Is this the CVE your reproduce?
+http://www.securityfocus.com/bid/3712
+
+=============  Response ===============
+
+The trace files should be strace, i.e. system call sequences.
+This folder only contains the logged traces, not the exploitation itself.
+
+For the backdoor and telnet cases, you can use metasploit (https://www.metasploit.com/)
+It you haven't used it before, the file "attack-trace-context/backdoor-attack-context-strace/HowToExploit" contains step by step instructions.
+
+The other 2 ROP exploits are produced using some open source ROP tools (such as this one: https://github.com/JonathanSalwan/ROPgadget)
+Basically you need to
+1. find all available gadgets in a vulnerable binary
+2. find some gadgets that's useful for your attack and
+3. construct a chain of gadgets which does what you want and can be executed sequentially and automatically, after a successful exploitation(such as buffer overflow)
+
+I was testing ROP with gzip, but you can pick any other applications you want.
+
+best,
+XXX
+
+
+============== SEND =================
+On Tue, Aug 23, 2016 at 7:57 PM, Ke Tian <ketian@vt.edu> wrote:
+
+Hi XXXX,
+
+Sorry to bother you again. 
+I recently need to reproduce the attacks to test a model.
+I try to figure out the attacks myself (in the attachment) but have some troubles to produce the attacks based on your folder.
+
+1)Do you have some instructions for reproducing these 4 attacks? 
+2)The trace file is the ltrace file or the strace file?
+
+Thanks very much for your help.
+
+
