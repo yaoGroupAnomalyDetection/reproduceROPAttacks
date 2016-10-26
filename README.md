@@ -8,7 +8,7 @@
 Look into the folder Call Traces.
 
 ##Paper1 Reproduce
-for dsn 16, check README_ATTACK and discussions
+for dsn 16, check README_ATTACK and discussions (***very important!***)
 
 ###Metasploit for proftpd:
 
