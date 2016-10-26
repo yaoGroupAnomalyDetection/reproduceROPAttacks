@@ -1,15 +1,13 @@
-
-=============  Response 2==============
-Good to hear you are making progress. For the gzip case, I added a few lines of code with vulnerability(buffer overflow) to the source file and then build the binary. Basically, I manually injected a vulnerability in it, which originally did not exist.
+============= Instruction 2==============
+For the gzip case, I added a few lines of code with vulnerability(buffer overflow) to the source file and then build the binary. Basically, I manually injected a vulnerability in it, which originally did not exist.
 
 The CVE you found is probably a better option to reproduce, because then you can cite the CVE in your paper, which is much nicer than what i did. If you decide to go this route, make sure you pick the right version of vulnerable gzip. 
 
 You probably also need to turn off ASLR in OS to have more predictable addresses.
 
-=============  SEND 2 =================
-Thanks for your help, I have achieved the  metasploit  exploit part.
 
-But for your gzip ROP:
+------------
+the gzip ROP:
 
 I can use ROP to generate the gadgets but cannot run the program
 
@@ -45,7 +43,11 @@ allfile: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Is this the CVE your reproduce?
 http://www.securityfocus.com/bid/3712
 
-=============  Response ===============
+=============  Instruction 1 ===============
+
+1)Do you have some instructions for reproducing these 4 attacks? 
+2)The trace file is the ltrace file or the strace file?
+
 
 The trace files should be strace, i.e. system call sequences.
 This folder only contains the logged traces, not the exploitation itself.
@@ -61,22 +63,7 @@ Basically you need to
 
 I was testing ROP with gzip, but you can pick any other applications you want.
 
-best,
-XXX
 
 
-============== SEND =================
-On Tue, Aug 23, 2016 at 7:57 PM, Ke Tian <ketian@vt.edu> wrote:
-
-Hi XXXX,
-
-Sorry to bother you again. 
-I recently need to reproduce the attacks to test a model.
-I try to figure out the attacks myself (in the attachment) but have some troubles to produce the attacks based on your folder.
-
-1)Do you have some instructions for reproducing these 4 attacks? 
-2)The trace file is the ltrace file or the strace file?
-
-Thanks very much for your help.
 
 
