@@ -1,6 +1,8 @@
 1) Using strace 
 
-To obtain the PC value from which a system call was invoked in a CPS program, we need to go back through the call stacks until finding a valid PC along with each system call. Therefore, we compiled strace with -libunwind support, which enables stack unwinding, so as to print call stacks (libunwind-based backtraces) on every system call. 
+To obtain the PC value from which a system call was invoked, we need to go back through the call stacks until finding a 
+valid PC along with each system call in a program. Therefore, we compiled strace with -libunwind support, which enables stack unwinding,
+so as to print call stacks (libunwind-based backtraces) on every system call. 
 
 For example:
 we use strace-4.13 to trace system calls
@@ -20,17 +22,13 @@ we get the system call traces with call stacks like the following:
  
  2) Using SystemTap
  
- Here is a good example of using SystemTap for system call tracing:
- 
- https://sourceware.org/systemtap/examples/process/strace.stp
+ Below is the Stap script of using SystemTap for system call tracing:
  process/strace.stp - Trace system calls
+ https://sourceware.org/systemtap/examples/process/strace.stp
  The script loosely emulates strace, when applied to individual processes or hierarchies (via -c/-x), or the entire system (without -c/-x). A few output configuration parameters may be set with -G.
-This is the output of the example:
+
+This is the output of the above example:
 xx@desktop:~/systemstap$ sudo stap strace.stp -w -c "echo hello world" 
-
-
-
-
 hello world
 Wed Oct 26 16:03:40 2016.981683 rt_sigsuspend([EMPTY], 8) = -514
 Wed Oct 26 16:03:40 2016.981800 rt_sigreturn() = -4 (EINTR)
