@@ -20,22 +20,18 @@ The scressnhot for metasploit
 ###ROP and return to LibC
 The screenshot for gzip ROP
 
-ROP:
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/ropShell.png "Get the Shell from metasploit")
 
 
 return2Libc:
+
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/LibCgetAshell.png "Return toLibc how to find addresses")
 
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/returnToLibcCode.png "Map address to code")
 
-Markup :  - - - -
-
 
 ##Attack2 Reproduce
 for ccs 16, under construction 
-
-Markup :  - - - -
 
 
 ## Reference 
