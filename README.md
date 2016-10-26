@@ -41,7 +41,7 @@ feed these addresse into exploit script
 
 
 ##Reproduce --Type 2--
-for ccs 16, under construction 
+for ccs 15, under construction 
 
 
 ## Reference 
