@@ -4,10 +4,11 @@
 
 ***Please put your own algorithm code in a safe place***
 
-##Call Traces
-Look into the folder Call Traces.
+##Call Trace Colection
 
-##Reproduce -type-1
+Please look into the folder CallTraces.
+
+##Reproduce -Type-1
 For dsn 16, check README_ATTACK and discussions (***very important!***)
 
 Bckground: Metaexploit, GDB
@@ -36,7 +37,7 @@ return2Libc to get a shell!
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/returnToLibcCode.png "Map address to code")
 
 
-##Paper2 Reproduce
+##Reproduce --Type 2--
 for ccs 16, under construction 
 
 
