@@ -1,3 +1,4 @@
+
 =============  Response 2==============
 Good to hear you are making progress. For the gzip case, I added a few lines of code with vulnerability(buffer overflow) to the source file and then build the binary. Basically, I manually injected a vulnerability in it, which originally did not exist.
 
