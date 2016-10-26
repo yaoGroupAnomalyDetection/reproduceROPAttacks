@@ -1,6 +1,8 @@
 # Attacks and Call Traces
 
-***This is a public domain, only for reproducing and tool usage. please put your algorithm code in a safe place***
+***This is a public domain, only for reproducing and trace tool usage, who is interesting in ROP attacks***
+
+***Please put your own algorithm code in a safe place***
 
 ##Attack1 Reproduce
 for dsn 16, check README_ATTACK and discussions
