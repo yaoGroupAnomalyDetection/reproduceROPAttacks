@@ -7,7 +7,7 @@
 ##Call Traces
 Look into the folder Call Traces.
 
-##Attack1 Reproduce
+##Paper1 Reproduce
 for dsn 16, check README_ATTACK and discussions
 
 ###Metasploit for proftpd:
@@ -33,7 +33,7 @@ return2Libc:
  ![picture alt](https://github.com/yaoGroupAnomaly/reproduceAttacks/blob/master/image/returnToLibcCode.png "Map address to code")
 
 
-##Attack2 Reproduce
+##Paper2 Reproduce
 for ccs 16, under construction 
 
 
